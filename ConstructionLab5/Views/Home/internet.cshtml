@@ -178,61 +178,46 @@
         </button>
     </div>
 
-
-    <!-- Content -->
-    <div class="content">
-
-
-        <div class="py-3">
-            <h2 class="ml-4">Об услуге</h2>
-            <p text-center pl-4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor porro vitae provident minima facilis cum, temporibus iusto aspernatur dolore iure impedit tempore quo, eaque quas natus culpa deleniti dolores eveniet laboriosam voluptatem voluptates
-                nam laudantium incidunt. Commodi, unde sit. Distinctio ducimus illo voluptate commodi similique! Inventore, nemo obcaecati incidunt odio sequi, veniam quos a ut itaque recusandae quam atque enim. Provident nulla explicabo accusantium laudantium
-                porro illum corporis autem expedita, harum, eveniet obcaecati praesentium beatae ab inventore quis magni nisi dicta! Eius consectetur totam, aut odit quod ut! Possimus officiis autem iusto ipsam blanditiis.
-
-            </p>
-        </div>
+    <div id="app">
+        <!-- Content -->
+        <div class="content">
 
 
+            <div class="py-3">
+                <h2 class="ml-4">Об услуге</h2>
+                <p text-center pl-4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor porro vitae provident minima facilis cum, temporibus iusto aspernatur dolore iure impedit tempore quo, eaque quas natus culpa deleniti dolores eveniet laboriosam voluptatem voluptates
+                    nam laudantium incidunt. Commodi, unde sit. Distinctio ducimus illo voluptate commodi similique! Inventore, nemo obcaecati incidunt odio sequi, veniam quos a ut itaque recusandae quam atque enim. Provident nulla explicabo accusantium laudantium
+                    porro illum corporis autem expedita, harum, eveniet obcaecati praesentium beatae ab inventore quis magni nisi dicta! Eius consectetur totam, aut odit quod ut! Possimus officiis autem iusto ipsam blanditiis.
 
-
-        <div class="pl-4 py-4">
-            <h2>Инетернет для Квартиры:</h2>
-        </div>
-        <div class="row  card-deck mb-3 text-center">
-
-            <div class="col-md-4 col-sm-12  buffer card mb-4 px-2  box-shadow">
-                <div class="card-header">
-                    <h3>Тариф S</h3>
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita facilis neque ex iure repudiandae perferendis vero, consequuntur ipsum voluptatibus nostrum! Deleniti illum sunt ut magni commodi expedita ipsa impedit doloribus!</p>
-                    <a class="btn btn-lg btn-block btn-outline-primary" href="/Home/request">
-                        Подключить
-                    </a>
-                </div>
+                </p>
             </div>
-            <div class="col-md-4 col-sm-12 buffer card mb-4 px-2 box-shadow">
-                <div class="card-header">
-                    <h3>Тариф M</h3>
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita facilis neque ex iure repudiandae perferendis vero, consequuntur ipsum voluptatibus nostrum! Deleniti illum sunt ut magni commodi expedita ipsa impedit doloribus!</p>
-                    <a class="btn btn-lg btn-block btn-outline-primary" href="/Home/request">
-                        Подключить
-                    </a>
-                </div>
+
+
+
+
+            <div class="pl-4 py-4">
+                <h2>Инетернет для Квартиры: {{message}}</h2>
             </div>
-            <div class="col-md-4 col-sm-12 buffer card mb-4 px-2  box-shadow">
-                <div class="card-header">
-                    <h3>Тариф L</h3>
+            <div class="row  card-deck mb-3 text-center">
+
+            
+                <div class="col-md-4 col-sm-12  buffer card mb-4 px-2  box-shadow"    v-for="item in tariff_flats">
+                    <div class="card-header">
+                        <h3>{{item.title}}</h3>
+                       
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            {{item.descr}}</p>
+                        <p>{{item.price}} ₽/мес - абонентская плата</p>
+                        <a class="btn btn-lg btn-block btn-outline-primary" href="/Home/request">
+                            Подключить
+                        </a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita facilis neque ex iure repudiandae perferendis vero, consequuntur ipsum voluptatibus nostrum! Deleniti illum sunt ut magni commodi expedita ipsa impedit doloribus!</p>
-                    <a class="btn btn-lg btn-block btn-outline-primary" href="/Home/request">
-                        Подключить
-                    </a>
-                </div>
+
+
 
 
 
@@ -293,6 +278,8 @@
 
     </div>
     <!-- Footer -->
+    </div>
+
     <footer class="container-fluid py-5 px-3 footer bg-dark">
         <div class="row">
             <div class="col-md-3">
@@ -345,7 +332,8 @@
 
 
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="/Scripts/internet.js"></script>"
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

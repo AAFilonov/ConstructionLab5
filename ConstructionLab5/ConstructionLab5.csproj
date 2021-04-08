@@ -138,6 +138,7 @@
     <None Include="Views\Home\request.cshtml" />
     <None Include="Views\Home\request_send.cshtml" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\internet.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
