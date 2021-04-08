@@ -1,4 +1,4 @@
-﻿@{
+﻿@{ 
     Layout = null;
 }
 <!DOCTYPE html>
@@ -9,12 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>MyProvider.com - Главная</title>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <style>
         body {
             padding-top: 3rem;
+
         }
 
         .container {
@@ -45,6 +46,7 @@
             padding: .5rem 1rem;
         }
 
+
         .content {
             margin-left: 10rem;
             margin-right: 10rem;
@@ -59,41 +61,44 @@
             flex-flow: row wrap;
             margin-right: -15px;
             margin-left: -15px;
+
         }
 
         footer {
             color: rgba(255, 255, 255, .75);
         }
 
-            footer a {
-                color: rgba(255, 255, 255, 0.897);
-            }
+        footer a {
+            color: rgba(255, 255, 255, .5);
+        }
+
 
         .flyer {
             min-height: 500px;
             padding: 5rem;
             padding-top: 7rem;
-            background-color: rgba(245, 243, 234, 0.966)
+            background-color: rgba(245, 239, 209, 0.856)
         }
 
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             height: 100px;
             width: 100px;
+
             background-image: none;
         }
 
-            .carousel-control-next-icon:after {
-                content: '>';
-                font-size: 55px;
-                color: black;
-            }
+        .carousel-control-next-icon:after {
+            content: '>';
+            font-size: 55px;
+            color: black;
+        }
 
-            .carousel-control-prev-icon:after {
-                content: '<';
-                font-size: 55px;
-                color: black;
-            }
+        .carousel-control-prev-icon:after {
+            content: '<';
+            font-size: 55px;
+            color: black;
+        }
     </style>
 
 </head>
@@ -101,7 +106,8 @@
 <body>
 
     <!-- Modal -->
-    <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestModalLabel" aria-hidden="true">
+    <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -114,7 +120,8 @@
                     <form>
                         <div class="row">
                             <div class="form-group col-6 order-3">
-                                <input type="email" class="form-control" id="exampleInputEmail" placeholder="Электронная почта">
+                                <input type="email" class="form-control" id="exampleInputEmail"
+                                    placeholder="Электронная почта">
                             </div>
                             <div class="form-group col-6 order-1">
                                 <input type="text" class="form-control" id="exampleInputName" placeholder="Имя">
@@ -141,7 +148,8 @@
     <!-- Nav -->
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -149,18 +157,19 @@
 
                 <a class="navbar-brand" href="#">myProvider.com</a>
                 <ul class="navbar-nav ml-left">
-                    <li class="nav-item"> <a class="nav-link" href="/index.html"> Главная</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/Home/Index/"> Главная</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наши услуги</a>
+                        <a class="nav-link dropdown-toggle" href="" id="dropdown03"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наши услуги</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown03">
-                            <a class="dropdown-item" href="/Home/internet">Интернет</a>
+                            <a class="dropdown-item" href="/Home/Internet/">Интернет</a>
                             <a class="dropdown-item" href="#">ТВ</a>
                             <a class="dropdown-item" href="#">Интернет+ТВ</a>
                             <a class="dropdown-item" href="#">Телефония</a>
                         </div>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="#"> Бизнес-Предложения</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="/Home/LK"> Личный кабинет</a></li>
+                    <li class="nav-item"> <a class="nav-link" href=""> Бизнес-Предложения</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/Home/LK/"> Личный кабинет</a></li>
 
                 </ul>
                 <button class="btn btn-outline-success ml-auto mr-5 my-sm-0"> Стать Клиентом</button>
@@ -181,10 +190,8 @@
                 <div class="flyer  text-center  justify-self-center">
                     <h1 class="d-lg-4  mt-4">MyProvider.com</h1>
                     <p class="lead">Станьте клиентом уже сегодня</p>
-                    <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#requestModal">
-                        Оставить
-                        заявку
-                    </button>
+                    <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#requestModal">Оставить
+                        заявку</button>
                 </div>
 
             </div>
@@ -192,10 +199,8 @@
                 <div class="flyer  text-center  justify-self-center">
                     <h1 class="d-lg-4  mt-4">Интернет</h1>
                     <p class="lead"> Стоимость подключения и первый месяц обслуживания всего 1 ₽</p>
-                    <a class="btn btn-lg btn-primary" href="/Home/internet">
-                        Подключить
-                        интернет
-                    </a>
+                    <a class="btn btn-lg btn-primary" href="internet.html">Подключить
+                        интернет</a>
                 </div>
 
             </div>
@@ -235,7 +240,11 @@
                     <h3>Тариф S</h3>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita facilis neque ex iure repudiandae perferendis vero, consequuntur ipsum voluptatibus nostrum! Deleniti illum sunt ut magni commodi expedita ipsa impedit doloribus!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita facilis neque ex iure
+                        repudiandae perferendis vero, consequuntur ipsum voluptatibus nostrum! Deleniti illum
+                        sunt
+                        ut
+                        magni commodi expedita ipsa impedit doloribus!</p>
                     <button class="btn btn-lg btn-block btn-outline-primary">
                         Подключить
                     </button>
@@ -246,7 +255,11 @@
                     <h3>Тариф M</h3>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita facilis neque ex iure repudiandae perferendis vero, consequuntur ipsum voluptatibus nostrum! Deleniti illum sunt ut magni commodi expedita ipsa impedit doloribus!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita facilis neque ex iure
+                        repudiandae perferendis vero, consequuntur ipsum voluptatibus nostrum! Deleniti illum
+                        sunt
+                        ut
+                        magni commodi expedita ipsa impedit doloribus!</p>
                     <button class="btn btn-lg btn-block btn-outline-primary">
                         Подключить
                     </button>
@@ -257,7 +270,11 @@
                     <h3>Тариф L</h3>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita facilis neque ex iure repudiandae perferendis vero, consequuntur ipsum voluptatibus nostrum! Deleniti illum sunt ut magni commodi expedita ipsa impedit doloribus!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita facilis neque ex iure
+                        repudiandae perferendis vero, consequuntur ipsum voluptatibus nostrum! Deleniti illum
+                        sunt
+                        ut
+                        magni commodi expedita ipsa impedit doloribus!</p>
                     <button class="btn btn-lg btn-block btn-outline-primary">
                         Подключить
                     </button>
@@ -273,19 +290,61 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque accusantium illum eligendi architecto sapiente asperiores nostrum deleniti. Accusamus quidem accusantium impedit voluptatum minus quis delectus quibusdam eos, repellat sint optio numquam!
-                    Minus, ut labore omnis molestias dolorem inventore, officiis veritatis esse quod, accusantium alias. Nesciunt eum veritatis vero repudiandae expedita deleniti repellat vitae officia architecto porro quam doloremque, provident quis
-                    omnis libero explicabo magni non iusto. Cumque, exercitationem quaerat debitis illo maiores consequatur nam vel perspiciatis optio! Ab, praesentium ad natus id aut eveniet voluptatibus voluptate maxime amet voluptatem ratione dignissimos
-                    possimus, quia harum nemo sapiente necessitatibus non. Nihil repellat rem id soluta, numquam nobis. Cum architecto nesciunt itaque pariatur soluta, delectus non dolorum laudantium atque, eaque accusantium? Deleniti, quas. Ea
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque accusantium illum
+                    eligendi
+                    architecto
+                    sapiente asperiores nostrum deleniti. Accusamus quidem accusantium impedit voluptatum minus
+                    quis
+                    delectus
+                    quibusdam eos, repellat sint optio numquam! Minus, ut labore omnis molestias dolorem
+                    inventore,
+                    officiis
+                    veritatis esse quod, accusantium alias. Nesciunt eum veritatis vero repudiandae expedita
+                    deleniti
+                    repellat
+                    vitae officia architecto porro quam doloremque, provident quis omnis libero explicabo magni
+                    non
+                    iusto.
+                    Cumque, exercitationem quaerat debitis illo maiores consequatur nam vel perspiciatis optio!
+                    Ab,
+                    praesentium
+                    ad natus id aut eveniet voluptatibus voluptate maxime amet voluptatem ratione dignissimos
+                    possimus, quia
+                    harum nemo sapiente necessitatibus non. Nihil repellat rem id soluta, numquam nobis. Cum
+                    architecto
+                    nesciunt
+                    itaque pariatur soluta, delectus non dolorum laudantium atque, eaque accusantium? Deleniti,
+                    quas. Ea
 
                 </p>
             </div>
             <div class="col-md-6 col-sm-12">
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque accusantium illum eligendi architecto sapiente asperiores nostrum deleniti. Accusamus quidem accusantium impedit voluptatum minus quis delectus quibusdam eos, repellat sint optio numquam!
-                    Minus, ut labore omnis molestias dolorem inventore, officiis veritatis esse quod, accusantium alias. Nesciunt eum veritatis vero repudiandae expedita deleniti repellat vitae officia architecto porro quam doloremque, provident quis
-                    omnis libero explicabo magni non iusto. Cumque, exercitationem quaerat debitis illo maiores consequatur nam vel perspiciatis optio! Ab, praesentium ad natus id aut eveniet voluptatibus voluptate maxime amet voluptatem ratione dignissimos
-                    possimus, quia harum nemo sapiente necessitatibus non. Nihil repellat rem id soluta, numquam nobis. Cum architecto nesciunt itaque pariatur soluta, delectus non dolorum laudantium atque, eaque accusantium? Deleniti, quas. Ea
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque accusantium illum
+                    eligendi
+                    architecto
+                    sapiente asperiores nostrum deleniti. Accusamus quidem accusantium impedit voluptatum minus
+                    quis
+                    delectus
+                    quibusdam eos, repellat sint optio numquam! Minus, ut labore omnis molestias dolorem
+                    inventore,
+                    officiis
+                    veritatis esse quod, accusantium alias. Nesciunt eum veritatis vero repudiandae expedita
+                    deleniti
+                    repellat
+                    vitae officia architecto porro quam doloremque, provident quis omnis libero explicabo magni
+                    non
+                    iusto.
+                    Cumque, exercitationem quaerat debitis illo maiores consequatur nam vel perspiciatis optio!
+                    Ab,
+                    praesentium
+                    ad natus id aut eveniet voluptatibus voluptate maxime amet voluptatem ratione dignissimos
+                    possimus, quia
+                    harum nemo sapiente necessitatibus non. Nihil repellat rem id soluta, numquam nobis. Cum
+                    architecto
+                    nesciunt
+                    itaque pariatur soluta, delectus non dolorum laudantium atque, eaque accusantium? Deleniti,
+                    quas. Ea
 
                 </p>
 
@@ -338,8 +397,7 @@
 
             </div>
             <div class="col-md-12">
-                <p class="">
-                    © АО «Что-там Холдинг» 2011-2021
+                <p class="">© АО «Что-там Холдинг» 2011-2021
                 </p>
             </div>
 
@@ -348,9 +406,16 @@
 
 
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

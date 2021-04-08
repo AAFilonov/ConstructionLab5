@@ -15,15 +15,23 @@ namespace ConstructionLab5.Controllers
 
         public ActionResult Internet()
         {
+    
             return View();
         }
 
-        public ActionResult Request()
-        {
-            return View();
-        }
         public ActionResult LK()
         {
+
+            return View();
+        }
+        public ActionResult Request_()
+        {
+
+            return View();
+        }
+        public ActionResult Request_send()
+        {
+
             return View();
         }
     }
