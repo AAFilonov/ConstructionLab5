@@ -9,6 +9,23 @@
 
         ]
 
-    }
+    },
+    methods: {
+        async initialize() {
+            let response = await fetch(`/api/Tariff/getData`, {
+                method: 'GET'
+            });
+
+            if (response.ok) {
+
+                this.message = await message.json();
+                console.log(this.statistics);
+            } else console.log('Произошла внутренняя ошибка сервера.'); 
+        },
+    },
+    async mounted() {
+
+        await this.initialize();
+    },
 
 });

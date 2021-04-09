@@ -4,33 +4,39 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Results;
-using System.Web.Mvc;
-
-using System.Data.SqlClient;
-
 
 namespace ConstructionLab5.Controllers
 {
     public class TariffsController : ApiController
     {
-
-        private static readonly string[] Summaries = new[]
-       {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
-        [Route("api/[controller]/get_tariffs_data")]
-        [HttpGet]
+        // GET api/<controller>
         public IEnumerable<string> Get()
         {
-            var actionResult = new Dictionary<string, string> {
-               {  "Квартирный  S","Длинное описание тарифа Квартирный S"},
-            {  "Квартирный  M", "Длинное описание тарифа Квартирный M"},
-            {  "Квартирный  L",  "Длинное описание тарифа Квартирный L" }
-          };
-            return new JsonResult(actionResult);
+            return new string[] { "value1", "value2" };
+        }
 
+
+        [Route("api/[controller]/getData")]
+        [HttpGet]
+        // GET api/<controller>/5
+        public string Get(int id)
+        {
+            return "value";
+        }
+
+        // POST api/<controller>
+        public void Post([FromBody] string value)
+        {
+        }
+
+        // PUT api/<controller>/5
+        public void Put(int id, [FromBody] string value)
+        {
+        }
+
+        // DELETE api/<controller>/5
+        public void Delete(int id)
+        {
         }
     }
 }
